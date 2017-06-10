@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import MainView from './source/views';
 
 export default class MultiTimer extends Component {
   render() {
@@ -26,6 +27,8 @@ export default class MultiTimer extends Component {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
+        <MainView>
+        </MainView>
       </View>
     );
   }
