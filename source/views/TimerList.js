@@ -9,7 +9,7 @@ import styles, {constants} from '../../styles.js';
 
 class TimerList extends Component {
   static navigationOptions = ({ navigation, screenProps }) => ({
-      title: 'Chat with Lucy',
+      title: 'Timers',
       headerRight: <Button title="Create" onPress={() => navigation.navigate('CreateTimer', { name: 'Jane' }) } />,
     });
   render() {
@@ -23,6 +23,5 @@ class TimerList extends Component {
     );
   }
 }
-
 
 module.exports = TimerList;

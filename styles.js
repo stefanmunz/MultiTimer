@@ -5,6 +5,9 @@ const constants = {
 };
 
 var styles = StyleSheet.create({
+  inputContainer: {
+    padding: 10
+  },
   container: {
     backgroundColor: 'green',
     flex: 1,

@@ -6,14 +6,16 @@ import {
   Button,
   TouchableHighlight } from 'react-native';
 import styles, {constants} from '../../styles.js';
+import NameInput from '../components/NameInput';
+import TimerInput from '../components/TimerInput';
 
 class CreateTimerView extends Component {
   render() {
     return (
-      <Button
-        title="This is the create screen"
-        onPress={() => {}}
-      />
+      <View>
+        <NameInput/>
+        <TimerInput/>
+      </View>
     );
   }
 }
