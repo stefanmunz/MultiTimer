@@ -5,10 +5,47 @@ import {
 
 import TimerList from './TimerList';
 import CreateTimerView from './CreateTimerView';
-  
-const BasicApp = StackNavigator({
+
+const MainStack = StackNavigator({
   Main: {screen: TimerList},
   CreateTimer: {screen: CreateTimerView},
 });
 
-module.exports = BasicApp;
+export default class MainView extends Component {
+
+  state = {
+    timers: [{name: "Schnitzel", time: "220"}],
+    currentTime: 0
+  }
+
+  addTimer = (name, time) => {
+    this.setState({
+      timers: [...this.state.timers, {
+        name,
+        time,
+        startTime: null
+      }]
+    })
+  }
+
+  startTimer = (timer) => {
+    timer.startTime = Date.now();
+  }
+
+ loop = () => {
+   this.setState({currentTime: Date.now()});
+ }
+
+componentDidMount () {
+  setInterval(this.loop, 100);
+}
+
+  render() {
+    return (
+      <MainStack screenProps={{timers: this.state.timers,
+        addTimer: this.addTimer,
+        currentTime: this.state.currentTime
+      startTimer: this.startTimer}} />
+    )
+  }
+}

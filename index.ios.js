@@ -11,13 +11,12 @@ import {
   Text,
   View
 } from 'react-native';
-import BasicApp from './source/views/MainView.js';
+import MainView from './source/views/MainView.js';
 
 export default class MultiTimer extends Component {
   render() {
     return (
-      <BasicApp >
-      </BasicApp>
+      <MainView/>
     );
   }
 }

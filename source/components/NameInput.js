@@ -15,7 +15,8 @@ class NameInput extends Component {
         <TextInput
           style={{height: 40}}
           placeholder="Name"
-          onChangeText={() => {}}
+          defaultValue={this.props.default}
+          onChangeText={this.props.onChange}
         />
       </View>
     );
