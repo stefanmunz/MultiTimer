@@ -37,7 +37,7 @@ class Timer extends Component {
         <View style={{flex: 0, justifyContent: 'center'}}>
           <Button
             title="Start"
-            onPress={() => {}} />
+            onPress={this.props.startTimer()}} />
         </View>
       </View>
     );

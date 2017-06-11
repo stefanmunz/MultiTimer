@@ -22,7 +22,11 @@ class TimerList extends Component {
     return (
       <FlatList
         data={this.props.screenProps.timers}
-        renderItem={ ({item}) => <Timer timer={item} currentTime={this.props.screenProps.currentTime} />}
+        renderItem={ ({item}) => {
+          return (
+            <Timer timer={item} currentTime={this.props.screenProps.currentTime} onStart={this.handleStart} />
+          );
+        }}
         keyExtractor={this._keyExtractor}
       />
     );
